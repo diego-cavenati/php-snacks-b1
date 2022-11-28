@@ -6,27 +6,30 @@
 
 $partite = [
     [
-        'squadra di casa' => 'Celtics',
-        'squadra ospite' => 'Bergamo',
-        'punteggio' => '55-60',
+        'squadra_di_casa' => 'Celtics',
+        'squadra_ospite' => 'Bergamo',
+        'punteggio_di_casa' => '55',
+        'punteggio_ospite' => '60',
     ],
     [
-        'squadra di casa' => 'Milano',
-        'squadra ospite' => 'Bologna',
-        'punteggio' => '55-60',
+        'squadra_di_casa' => 'Milano',
+        'squadra_ospite' => 'Bologna',
+        'punteggio_di_casa' => '55',
+        'punteggio_ospite' => '60',
     ],
     [
-        'squadra di casa' => 'Chicago',
-        'squadra ospite' => 'Amsterdam',
-        'punteggio' => '33-60',
+        'squadra_di_casa' => 'Chicago',
+        'squadra_ospite' => 'Amsterdam',
+        'punteggio_di_casa' => '33',
+        'punteggio_ospite' => '0',
     ],
 ];
 
-foreach ($partite as $partita) {
-    foreach ($partita as $risultato) {
-        echo $risultato . '<br>';
-    };
-};
+// foreach ($partite as $partita) {
+//     foreach ($partita as $risultato) {
+//         echo $risultato . '<br>';
+//     };
+// };
 
 ?>
 
@@ -60,7 +63,9 @@ foreach ($partite as $partita) {
 
         </div>
     </div> -->
-
+    <?php foreach ($partite as $partita) : ?>
+        <li><?php echo $partita['squadra_di_casa'] . '-' . $partita['squadra_ospite'] ?> | <?php echo $partita['punteggio_di_casa'] . '-' . $partita['punteggio_ospite'] ?> </li>
+    <?php endforeach; ?>
 
 
     <!-- Bootstrap script -->
